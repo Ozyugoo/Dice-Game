@@ -16,6 +16,33 @@ const current1 = document.getElementById("current--1");
 const stat1 = document.getElementById("stat--1");
 const stat2 = document.getElementById("stat--2");
 
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const btnCloseModal = document.querySelector(".close-modal");
+const btnOpenModal = document.querySelector(".btn--hint");
+
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+const openModal = function () {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+
+btnOpenModal.addEventListener("click", openModal);
+
+btnCloseModal.addEventListener("click", closeModal);
+
+overlay.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
+});
+
 // Stating conditions
 let scores, currentScore, activePlayer, playing;
 

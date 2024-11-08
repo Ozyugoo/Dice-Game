@@ -33,6 +33,30 @@
       <button class="btn btn--new">🔄️ New Game</button>
       <button class="btn btn--roll">🎲 Roll Dice</button>
       <button class="btn btn--hold">📥 Hold</button>
+      <button class="btn btn--hint">💡Help</button>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h2>How to Play the Dice Game</h2>
+        <ul>
+          <li>
+            Use the Roll dice button to start, Player 1 starts the initial game
+            until there's a winner.
+          </li>
+          <li>
+            Use the Hold button to save the score for the active player, this
+            will save and switch to the next player.
+          </li>
+          <li>
+            Use the New Game button to start another game after a win. Once
+            there is a winner, it start a fresh game and switch the winner as
+            active player.
+          </li>
+          <li>
+            Dice 1 (one) switches the player and cancels other players current score not the winning tracks. The winning track is saved on the players top left or right corner.
+          </li>
+        </ul>
+      </div>
+      <div class="overlay hidden"></div>
     </main>
     <script src="script.js"></script>
   </body>
